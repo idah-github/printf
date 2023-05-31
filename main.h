@@ -22,25 +22,13 @@
 *
 */
 
-struct fm
+typedef struct fm
 {
 	char fmt;
 	int (*fun)(va_list, char[], int, int, int, int);
 } fm_t;
 
-/**
-*typedef struct fm fm_t - op struct def
-*@fm: the format
-*@fm_t: associated function
-*
-*
-*typedef struct fm fm_t;
-*/
-
 int _printf(const char *format, ...);
-int print(const char *fmt, int *i,
-va_list list, char buffer[], int flags, int width, int precision, int size);
-
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
