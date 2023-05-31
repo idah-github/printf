@@ -1,5 +1,6 @@
 #include "main.h"
-
+int print(const char *fmt, int *ind, va_list ap, char buffer[],
+		int flags, int width, int precision, int size);
 void print_buffer(char buffer[], int *buff_ind);
 
 /**
@@ -26,7 +27,6 @@ int _printf(const char *format, ...)
 			buffer[buff_ind++] = format[i];
 			if (buff_ind == BUFF_SIZE)
 				print_buffer(buffer, &buff_ind);
-			/* write(1, &format[i], 1);*/
 			printed_chars++;
 		}
 		else
