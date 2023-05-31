@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
-*flags - Calc active flags
+*gflags - Calc active flags
 *@format: Formatted string  to print the arguments
 *@i: take a parameter.
 *
 *Return: Flags:
 */
-int flags(const char *format, int *i)
+int gflags(const char *format, int *i)
 {
 	int j, curr_i;
 	int flags = 0;

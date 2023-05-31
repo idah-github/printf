@@ -1,13 +1,13 @@
 #include "main.c"
 /**
-*width - Calc the width to print
+*gwidth - Calc the width to print
 *@format: Formatted string in which to print the arguments.
 *@i: List of arguments to be printed.
 *@list: list of arguments.
 *
 *Return: the width.
 */
-int width(const char *format, int *i, va_list list)
+int gwidth(const char *format, int *i, va_list list)
 {
 	int curr_i;
 	int width = 0;

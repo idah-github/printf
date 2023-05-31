@@ -26,7 +26,7 @@ struct fm
 {
 	char fmt;
 	int (*fun)(va_list, char[], int, int, int, int);
-} fm_t
+} fm_t;
 
 /**
 *typedef struct fm fm_t - op struct def
@@ -48,10 +48,10 @@ int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
 
-int flags(const char *format, int *i);
-int width(const char *format, int *i, va_list list);
-int precision(const char *format, int *i, va_list list);
-int size(const char *format, int *i);
+int gflags(const char *format, int *i);
+int gwidth(const char *format, int *i, va_list list);
+int gprecision(const char *format, int *i, va_list list);
+int gsize(const char *format, int *i);
 
 int print_int(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
